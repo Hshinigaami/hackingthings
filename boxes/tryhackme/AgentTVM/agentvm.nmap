@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Sat Aug  6 12:31:44 2022 as: nmap -sC -sV -sS -oA agentvm 10.10.161.4
+Nmap scan report for 10.10.161.4
+Host is up (0.16s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    PHP cli server 5.5 or later (PHP 8.1.0-dev)
+|_http-title:  Admin Dashboard
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug  6 12:32:06 2022 -- 1 IP address (1 host up) scanned in 22.08 seconds

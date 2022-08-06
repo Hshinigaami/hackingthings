@@ -8,6 +8,7 @@
 ## OSINT
 - Google DORK - This is best, list will be getting updated in future. - https://en.wikipedia.org/wiki/Google_hacking
     - ```site:``` This will only search for particular site
+        - ```site:*tryhackme.com``` This enumerates subdomains.
     - ```intitle:``` 
     - ```inurl:```
     - ```filetype:```
