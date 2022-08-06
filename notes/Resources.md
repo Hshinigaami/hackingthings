@@ -1,0 +1,2 @@
+- "Fossies" - the Fresh Open Source Software Archive
+- Favicon DB https://wiki.owasp.org/index.php/OWASP_favicon_database
