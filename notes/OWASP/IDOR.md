@@ -1,0 +1,3 @@
+- IDOR(Insecure direct Object Reference)
+- In simple terms, idor is when we don't have access to view/edit/delete other users info, <b>but</b> by modifying certain parameters in url or adding certain parameters leads us to view/edit/delete info.
+- Eg: /posts/article?id=1 but what if we change id, will this lead us to view other user post after adding username and email of other user. <i>change id number</i>

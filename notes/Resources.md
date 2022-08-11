@@ -1,3 +1,4 @@
 - "Fossies" - the Fresh Open Source Software Archive
 - Favicon DB https://wiki.owasp.org/index.php/OWASP_favicon_database
 - Crackstation for hash crack https://crackstation.net/
+- OWASP Cheatsheet https://cheatsheetseries.owasp.org/cheatsheets/
