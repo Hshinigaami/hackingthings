@@ -15,4 +15,5 @@
         - t is type where brt is Brute Force
     
     - sublist3r
-        - ```sublist3r -d domainname```
+        - ```sublist3r -d domainname -t 50 -b -p 80,443,21,22 -e google,yahoo,baidu```
+        - -t no of threads, -b bruteforce, -p ports, -e searchengines

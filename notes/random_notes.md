@@ -26,5 +26,34 @@
     - Content Delivery Network(CDN). This also acts as load balancer, lets say particular host has lots of static files. Then CDN will provide those host files from nearest servers located around you, so as to deny traffic.
 
 - WAF
-    - Web Application Firewall(WAF). I
+    - Web Application Firewall(WAF).
+
+## HTTP Headers
+- <i>This cannot be learned like lets learn all headers at once, not possible and confusing, its better to do it like, during Proxing your request, if you see all those headers then learn those...always better option</i>
+
+## SOP
+- Same Origin Policy allows browser to load resource from current domain(tab) only.
+- Lets say you are visiting some malicious website and also trusted website(bank), if SOP was not there, then malicious website will make a GET request to bank website, and if SOP is not there, then browser will include bank session cookies into your request and BOOM you get the data.
+- BUTTT because of SOP we are only allowed to load or get resources from current domain only.
+- Sometimes we want to load resources from different domains or maybe subdomains, thats where RELAXATION plays big role.
+- There are different ways to perform relaxation, SINCE sop does not limit JS code, and we can load JS Code from any origin.
+- CORS Policy is where relaxation can take place, it tells browser from where all we can load resources.
+    Access-Control-Allow-Origin: https://*.example.com
+- This will load resources from any subdomains.
+
+## CSP
+- Content Security Policy(CSP) Header is used for security purpose to tell browser from where we should load resources using Policy.
+- So for example, scripts should only be loaded from current domain and it should not be loaded from any random domain. This can be achieved by specifying this value: script-src: self This is policy(script-src: self)
+- If lets say you want to load other resources, like all other default resources from different domains, example, load fonts from fontawsm or load from googleanalytics and many more... we can use tags like fonts-src: example.com
+- Now lets say some policy are not defined and you want to load those resources, then we can do default-src: example.com
+- This prevents attacker from loading scripts from external domains, also CSP will block inline scripts and HTML Entities.
+- Now we can also use one csp header to report all violations that are performed.
+    Content-Security-Policy-Report-Only:
+        script-src: self;
+        default-src: self;
+        report-usi: https://www.example.com/csp_violations/
+    - This will report all violations that are performed, and we can use only this header if we don't want to use CSP.
+
+## Just some random keyboard shortcuts
+alt + tab -> to switch between windows, press alt + tab then release tab and switch between windows with tab key.
 

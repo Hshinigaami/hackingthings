@@ -51,3 +51,17 @@
 ## How to bruteforce subdomains by sending multiple requests.
 - ```dnsrecon -t brt -d domainname```
         - t is type where brt is Brute Force
+
+# Metasploit
+
+# Burp Suite
+
+# SQLMAP
+
+# BEeF
+
+# Manage_tools (CTF) - https://github.com/zardus/ctf-tools
+- ```manage-tools list```
+
+# pwn_tools (CTF)
+- Python package for developing exploit code.
