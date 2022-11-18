@@ -2,7 +2,7 @@
 
 - [Reverse Proxy](#Reverse-Proxy)
 - [Defensive Security](#Defensive-Security)
-- [Principles of Security](#Security-Principles)
+- [Principles of Security](#Principles-of-Security)
 
 # Questions
 
