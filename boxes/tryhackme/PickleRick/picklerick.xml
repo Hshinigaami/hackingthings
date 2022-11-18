@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Nov 18 19:56:30 2022 as: nmap -sC -sV -oA picklerick -p 1-10000 10.10.40.212 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -oA picklerick -p 1-10000 10.10.40.212" start="1668781590" startstr="Fri Nov 18 19:56:30 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="10000" services="1-10000"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.40.212" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1668781591" endtime="1668781789"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.40.212" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="9998">
+<extrareasons reason="conn-refused" count="9998" proto="tcp" ports="1-21,23-79,81-10000"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.6" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 81:e0:bb:f8:e1:66:47:d4:4b:28:74:8b:c1:a2:f4:24 (RSA)&#xa;  256 75:d9:a3:4d:2e:a1:a8:62:a0:28:d0:e6:0a:1c:aa:65 (ECDSA)&#xa;  256 21:a3:c4:88:0b:a4:10:d8:8d:79:4f:5a:ba:16:56:1b (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDlDU5zrK5v4+zWQa8CUDHb/L4FwIWN/cE6fs5S+7RbzExJV8NBTFzGxZ84MvgTCOJsUYHaIAFafW3OpwMku2Ori5e2On5HhfQ7IPCchxvix1dGoJYEjhoIeE+1o0DnbXdREhU79Q5ep/7Lsah6KT+6gpXFTcYkEdTEgQdTQ/bdQdXPhzEBQAq/Blei46Jacy3O7qEBzmQUxCnAjg0GtD/p9YTW+SEkHPfsGgdfW0ox8/F1pWM1mrFUcRCCrkUxVOd9P6LkxXf6bCsDJAvr+zE7F5ZBG2ThPtq3uJvWsDU+bVehJbdXy+H7rdtf6gHVkGJfTLbjJR5onOfdhUREr4pP</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">81e0bbf8e16647d44b28748bc1a2f424</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDKsbyXXOiGZ3vyIedJnTA8vAIKvXV6uzIqS2j0ovohvhpEecZnHhMFg6+NNvaBbYhAiMo11rM7QtU4A4kucfY=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">75d9a34d2ea1a862a028d0e60a1caa65</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJYe2fRlhQurBkv0GPLL/ZACivtJ5ramsRZOHKv2nQor</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">21a3c4880ba410d88d794f5aba16561b</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-title" output="Rick is sup4r cool"><elem key="title">Rick is sup4r cool</elem>
+</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="159522" rttvar="312" to="160770"/>
+</host>
+<runstats><finished time="1668781789" timestr="Fri Nov 18 19:59:49 2022" summary="Nmap done at Fri Nov 18 19:59:49 2022; 1 IP address (1 host up) scanned in 198.42 seconds" elapsed="198.42" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

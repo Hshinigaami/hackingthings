@@ -3,6 +3,7 @@
 - [Reverse Proxy](#Reverse-Proxy)
 - [Defensive Security](#Defensive-Security)
 - [Principles of Security](#Principles-of-Security)
+- [SSL Cert](#SSL-Cert)
 
 # Questions
 
@@ -53,3 +54,16 @@
 
 # Principles of Security
 
+# SSL Cert
+	1. SSL Cert verifies a websites identity. Now-a-days Every website is issued with a SSL Certificate by hosting providers.
+	2. This SSL Cert ensures that any transaction between two systems is secured and encrypted.
+	3. How SSL Cert works?
+		a. First User tries to connect to website(webserver)
+		b. Web server sends the SSL Certificate to browser
+		c. They verifies if its correct SSL, then user sends ok I would like to connect.
+		d. Webserver sends acknowledge with a digital signed signature to user.
+		e. And thus a encrypted channel/session begin between user and webserver.
+	4. 
+	## Resources:
+		1. http://www.steves-internet-guide.com/ssl-certificates-explained/
+		2. 
