@@ -1,0 +1,16 @@
+# Nmap 7.92 scan initiated Sat Nov 19 13:29:01 2022 as: nmap -sC -sV -oA rootme -p 80,443 10.10.205.97
+Nmap scan report for 10.10.205.97
+Host is up (0.14s latency).
+
+PORT    STATE  SERVICE VERSION
+80/tcp  open   http    Apache httpd 2.4.29 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: HackIT - Home
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 19 13:29:12 2022 -- 1 IP address (1 host up) scanned in 10.71 seconds

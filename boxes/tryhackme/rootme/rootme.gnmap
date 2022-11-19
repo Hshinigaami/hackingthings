@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Nov 19 13:29:01 2022 as: nmap -sC -sV -oA rootme -p 80,443 10.10.205.97
+Host: 10.10.205.97 ()	Status: Up
+Host: 10.10.205.97 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/, 443/closed/tcp//https///
+# Nmap done at Sat Nov 19 13:29:12 2022 -- 1 IP address (1 host up) scanned in 10.71 seconds

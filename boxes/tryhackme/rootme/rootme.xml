@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Nov 19 13:29:01 2022 as: nmap -sC -sV -oA rootme -p 80,443 10.10.205.97 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -oA rootme -p 80,443 10.10.205.97" start="1668844741" startstr="Sat Nov 19 13:29:01 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.205.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1668844742" endtime="1668844752"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.205.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-title" output="HackIT - Home"><elem key="title">HackIT - Home</elem>
+</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="139351" rttvar="78557" to="453579"/>
+</host>
+<runstats><finished time="1668844752" timestr="Sat Nov 19 13:29:12 2022" summary="Nmap done at Sat Nov 19 13:29:12 2022; 1 IP address (1 host up) scanned in 10.71 seconds" elapsed="10.71" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
