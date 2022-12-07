@@ -4,6 +4,7 @@
 - [Defensive Security](#Defensive-Security)
 - [Principles of Security](#Principles-of-Security)
 - [SSL Cert](#SSL-Cert)
+- [SNI](#SNI)
 
 # Questions
 
@@ -67,3 +68,13 @@
 	## Resources:
 		1. http://www.steves-internet-guide.com/ssl-certificates-explained/
 		2. 
+
+# SNI
+	1. SNI means server name indication, when we perform TLS Handshake, at this layer SNI is also validated.
+	2. Now why we needed SNI?
+		a. Now a days multiple websites with same IP Address is hosted on a web server.
+		b. so when we visit a website, before http protocol(which specifies the hostname we want to connect), SSL/TLS handshake is performed i.e SSL cert is given by server to browser.
+		c. Since, there are multiple websites with there own ssl cert, server don't know which ssl cert to issue to client.
+		d. This is where SNI came(Server Name Indication)
+	3. SNI is an extension to TLS protocol, they make it possible to specify domain name, during TLS handshake instead of during HTTP connection which is opened after TLS Handshake.
+	4. 
