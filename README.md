@@ -15,7 +15,7 @@
 - [PCAP Notes](PCAP.md)
 
 # Attacks
-- [HTTP Host Header Attacks](Http HOST Header Attacks)
+- [HTTP Host Header Attacks](Host_Header_Attacks.md)
 - [JWT](JSON_WEB_TOKENS.md)
 
 # Scripts & Notes
