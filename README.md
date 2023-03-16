@@ -32,3 +32,6 @@
 # CTF Notes
 - [After Shell](after_shell.md)
 - [CTF Notes](ctf.md)
+
+# UPDATES
+    - Mar152023: Kali Linux installed
