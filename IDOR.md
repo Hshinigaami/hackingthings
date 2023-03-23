@@ -13,9 +13,46 @@
    2) These are custom headers in some of the PHP Frameworks
    3) 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Tips and tricks 😁
+
+- POST /account/teamsetting/retired_team?team_id=victim’s_id%20
+    - In ID parameter, if ID does not work add, %20 in the end and send the request
+    - We can even use some special characters (/) or encoded string values.
+    - Don't give up just because you got unauthorised access.
+- Parameter Pollution
+    - GET /api/card?custom_id=<attacker_id>&custom_id=<victm's_is>
+- Change request methods.
+- Add custom parameter to each request.
+    - For eg, /add/card endpoint add parameter like /add/card?custom_id=victimid
+
+## **XSS Rat Tips**
+
+1. Accessing file/events of another user.
+2. What if trial account cannot execute all functionality, try executing those.
+3. Following conditions
+    1. Different Users
+    2. Different users with different priveleges
+    3. Functions/Events which are not accessible by low privelege users
+4. JS Files contains some functions that can be executable
+    1. Devs might disable UI Elements, but JS Functions might be still executable
+    2. Eg: Invoice button might be disabled, but if you go to JS File and execute that function which will print all Invoice details...IDOR+sde
+5. Intellisense - If we write letter a it will search for all javascript functions from all js files of page which contains letter a.
+6. Watch TOMNOMNOM video regarding Developer console + JS
+7. Login as High Priv get the link which is not accessible by low priv users, Logout and then try to access that link or functionality as low priv users.
+8. High Priv users actions/Functionality send them to Repeater then replace the Authorization cookies with low priv users, if we are able to access it...IDOR
+9. Use burp's Authorise and Autorepeater plugin.
+10. Cookies are of low priv users but if we replace sessions from low priv users to high priv users?? What could happen?
 
 # Methodologies
+
+*While testing for BAC do this*
+
+1. Explore Target
+2. Create users of all privelege levels
+3. Make a mindmap
+4. Hack
+5. Report
+
 1. going through /admin function, with normal user
 2. accessing admin endpoint with url parameter
    1) Can we escalate user privelege through login function? /login?returnUrl=%2f&role=admin or /login?returnUrl=%2f&admin=true
