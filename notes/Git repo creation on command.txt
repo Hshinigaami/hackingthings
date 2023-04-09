@@ -1,0 +1,25 @@
+# Git repo creation on command line
+
+1. create a new repository on the command line
+
+echo "# Barker" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hacknet/Barker.git
+git push -u origin main
+
+2. push an existing repository from the command line
+
+git remote add origin https://github.com/hacknet/Barker.git
+git branch -M main
+git push -u origin main
+
+3. Since github has removed password authentication mechanism, we have to generate a PAT(Personal Access Token) to authenticate. For 2nd step to work, during authentication...username: hacknet and password: PAT
+
+4. Links:
+
+1. First check this link: https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
+
+2. Second check this link: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token

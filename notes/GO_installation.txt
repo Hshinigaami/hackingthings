@@ -1,0 +1,11 @@
+GO installation
+
+1. Download linux package https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
+2. tar -C /usr/local -xvf <package-name>
+3. vi ~/.zshrc
+4. # Go variables and path
+export GOPATH=/root/go-workspace
+export GOROOT=/usr/local/go
+PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
+5. source ~/.zshrc
+6. go version

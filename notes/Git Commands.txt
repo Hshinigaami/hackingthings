@@ -1,0 +1,5 @@
+# Git Commands
+
+git remote set-url origin git://new.url.here - To set new origin
+git remote remove origin - To remove remote origin
+

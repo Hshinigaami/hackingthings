@@ -1,0 +1,6 @@
+How to save login info into server so that we can login without password
+
+1. cd ~
+2. ssh-keygen -t rsa -b 2048
+3. ssh-copy-id userid@server
+4. Now login into server with ssh userid@server
