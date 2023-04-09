@@ -2,4 +2,8 @@
 
 git remote set-url origin git://new.url.here - To set new origin
 git remote remove origin - To remove remote origin
+git pull - This incase, there are some files already changed in github.com and when you try to git push, you get error to fetch first.
+git fetch - To fetch latest commit.
+git merge - To merge your commit to master
+git push - To push the commit to repository
 
