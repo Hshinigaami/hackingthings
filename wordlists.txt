@@ -1,0 +1,13 @@
+https://wordlists-cdn.assetnote.io/data/manual/aspx_lowercase.txt
+https://wordlists-cdn.assetnote.io/data/manual/bak.txt
+https://wordlists-cdn.assetnote.io/data/manual/cfm.txt
+https://wordlists-cdn.assetnote.io/data/manual/do.txt
+https://wordlists-cdn.assetnote.io/data/manual/dot_filenames.txt
+https://wordlists-cdn.assetnote.io/data/manual/html.txt
+https://wordlists-cdn.assetnote.io/data/manual/jsp.txt
+https://wordlists-cdn.assetnote.io/data/manual/php.txt
+https://wordlists-cdn.assetnote.io/data/manual/phpmillion.txt
+https://wordlists-cdn.assetnote.io/data/manual/pl.txt
+https://wordlists-cdn.assetnote.io/data/manual/wordlist_no_underscores.txt
+https://wordlists-cdn.assetnote.io/data/manual/wordlist_no_underscores.txt
+https://wordlists-cdn.assetnote.io/data/manual/xml_filenames.txt
