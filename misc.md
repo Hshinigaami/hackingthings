@@ -7,17 +7,16 @@
 - [SNI](#SNI)
 
 # Questions
-
-- What is multiple layer of reverse proxy and how can we attack them.
+    - What is multiple layer of reverse proxy and how can we attack them.
 
 # Reverse Proxy
-- This means, when client sends a request, a proxy server is sitting in middle of client and server.
-- Then server will send this request to backend servers get the information and then again send back to client.
-- Difference between reverse and normal is, forward proxy server will route the traffic to other clients and not fetch any thing from backend servers.
-- One of the main thing is, reverse proxy won't reveal origin server IP.
-- How? Forward will sit between client and internet, so internet is able to access origin server, so IP Address is reveal.
-- Whereas, reverse proxy sits between internet and Origin IP, thus internet won't be accessing Origin IP whereas they would be accessing reverse proxy(CDN)
-- In this way, Websites are protected from various attacks, as they would be performing it on CDN. And reduces cost as reverse proxy would encrypt and decrypt(SSL and TLS) instead of all origin IP Server AND It also helps is load balancing.
+    - This means, when client sends a request, a proxy server is sitting in middle of client and server.
+    - Then server will send this request to backend servers get the information and then again send back to client.
+    - Difference between reverse and normal is, forward proxy server will route the traffic to other clients and not fetch any thing from backend servers.
+    - One of the main thing is, reverse proxy won't reveal origin server IP.
+    - How? Forward will sit between client and internet, so internet is able to access origin server, so IP Address is reveal.
+    - Whereas, reverse proxy sits between internet and Origin IP, thus internet won't be accessing Origin IP whereas they would be accessing reverse proxy(CDN)
+    - In this way, Websites are protected from various attacks, as they would be performing it on CDN. And reduces cost as reverse proxy would encrypt and decrypt(SSL and TLS) instead of all origin IP Server AND It also helps is load balancing.
 
 # Defensive Security
 ## Areas of Defensive Security
@@ -78,3 +77,19 @@
 		d. This is where SNI came(Server Name Indication)
 	3. SNI is an extension to TLS protocol, they make it possible to specify domain name, during TLS handshake instead of during HTTP connection which is opened after TLS Handshake.
 	4. 
+	
+# What is Routing?
+    - Routing specifies how data packets are transferred in a packet-networks of internet. These internet routing decisions are made by routers.
+    - So for ex: if one data packet needs to reach it's destination it can go through one route or some other route with faster reach.
+    - Main routing protocols include IP, BGP, OSPF, RIP.
+    - Internet protocol is specified with Source, Destination and Data header. Routers identify Destination and sends the packet accordingly.
+    - BGP(Border Gateway protocol) tells the router which AS(Autonomous System) to connect inorder to transfer data packets at a faster rate.
+        - BGP has it's own AS Database called routing table, that's how this protocol decides where to send the packet.
+        - Without BGP, IP protocol would be just hopping from one point to another until it reaches destination.
+    - OSPF is Open shortest path first and RIP is Routing Information Protocol which finds the shortest path based upon number of hops.
+    
+# What is ASN?
+    - ASN is Autonomous system numbers, Our internet is made up of networks, and each bulk of network is given a AS Number.
+    - So, when one bulk wants to connect with another, BGP identifies it through AS Number.
+    - Each AS has a IP Space, which defines what IP Address those AS controls.
+    - I believe, this is why Jhaddix wants to identify the ASN of each host, so that we know what IP Space that company withstands.
