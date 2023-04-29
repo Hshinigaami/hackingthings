@@ -93,3 +93,9 @@
     - So, when one bulk wants to connect with another, BGP identifies it through AS Number.
     - Each AS has a IP Space, which defines what IP Address those AS controls.
     - I believe, this is why Jhaddix wants to identify the ASN of each host, so that we know what IP Space that company withstands.
+    
+# What is Concurrent requests and Threads?
+     - Concurrent requests are requests that are send to application. If we set concurrent requests to 5 then 5 parallel requests will be send to application.
+     - Now, in this case, threads come into picture, lets say we send 5 requests, however default value of thread is set to 1, then only one request will be processed whereas if we set threads to 10, then 2 threads will process each request, and application will run faster.
+     - We need to tweak these 2 parameters and check what's best for us.
+    
