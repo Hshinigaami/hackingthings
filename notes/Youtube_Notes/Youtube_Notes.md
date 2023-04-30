@@ -8,6 +8,12 @@
 - Tool: nmap : Port scanning
 - Writes python scripts with friends to do various tasks
 
+
+##################################################################################
+
+
+
+
 ## Bug Hunter's Methodology v4.0 - Recon Edition by Jhaddix
     1. Project Tracking
         - Tools: XMIND, Excel, Vim, Notepad++
@@ -50,8 +56,60 @@
             1. Another tool to find details about target and get lot of information about there infrastructure.
     4. Enumerating Subdomains
         - Linked Discovery
-            1. When you visit your target, there are many links that are embedded on your site 
-            
+            1. When you visit your target, there are many links that are embedded on your site, so what jasson does is, he selects all the URL's that burp has scanned so far after you just visit the application and again spider those URL's.
+            2. So basically, you try to find more directories and subdomains that are linked in those URL's.
+            3. These can be acheived using other two cmd tools as well, like Gospider and Hakrawler.
+        - Another tool to find subdomains is Subdomanizer. This will look for subdomains inside javascript files and also some cloud links.
+        - One of the same tool is subscrapper, however this will not look for sensitive items that subdomanizer does. For ex; this tool will not look for API_KEYs
+    5. Subdomain scrapping
+        - Some of the scrapping sources: Censys, Robtex, Waybackmachine, dnsdumpster, netcraft, ptrarchive.com, dnsdbsearch, passive total
+        - Some cmd tools that Jasson recommends is Amass and Subfinder for finding subdomains.
+        - Github Enumeration: github-subdomains.py is another tool that scrapes subdomains from github. You need to give your PAT of github and it will start scraping.
+        - Github has rate limit feature, so jason will run the script 4-5 Times with a delay of 6-10 sec between each run.
+        - Shodan Enumeration; shosubgo is a tool that will scrap subdomains from shodan.
+        - Some high tier hunters scrap the SSL Certs from all cloud IP Space, for ex; from AWS, Azure they will check the SSL Certs from this cloud services providers, and parse the certificates according to the target.
+        - Check Daehee park's blog and Sam Erik talk on defcon for cloud ranges tools.
+    6. Subdomain Brute forcing.
+        - After we found the subdomains, we can bruteforce the target to find hidden subdomains, However we will need some resolvers in order to be faster.
+        - Tools such as Amass and shuffledns will give you good output.
+        - With good resolvers we also need good wordlist. Some user uses Tailored Wordlist(Like sorted ones) whereas some uses Massive Wordlist.
+        - Check jasson's all.txt wordlist good for brute force, also check Tomnomnom's talk on wordlist creation.
+        - Also, you can build your own wordlist from keywords that are present on site itself. Some tools are there, search for them.
+    7. Alteration scanning
+        - This is just permutation and combination of words in subdomains to find the target.
+        - For ex; you can try dev1.target.com, dev2, dev3... Just try to tweak some characters, strings to find and bypass valid subdomains.
+    8. Port analysis
+        - After we have identified subdomains, we need to port analysis which ports are open on target. Some tools are present like nmap, masscan however, jasson recommends to use masscan because this tool will not do any script processing or network scanning. It will just output port details.
+        - Since masscan works on only IP Address, we can use another tool which is dnmasscan, where we supply domain name and it will resolve IP Address for us and feed the IP details to masscan to get the results.
+        - Service Scanning: After we have Identified the ports from masscan or dnmasscan we can fetch those to nmap to get the service details.
+        - What jason has did is, he got the oG file from NMAP and feed that to brutespray Tool to get the service scanned. This tool will try default authentication methods like default creds and check if those work.
+    9. Github Dorking
+        - Another useful technique to find information about target is github dorking, where companies might push some sensitive data on github, even though they might have deleted those, it still might exist in commits.
+        - Jasson has a script on his github, which performs github dorking.
+        - Another tool which is mentioned above, github- search will also fetch good information.
+        - Checkout the talk by thegentelman's on Github and Sensitive data exposure.
+        - Manually, this can be done in parallel to subdomain enumeration which can take long time.
+    10. Screenshotting
+        - In this step, we can screenshot all the subdomains which are found.
+        - Tools: aquatone, eyewitness, httpscreenshot (Find one that is suitable to you)
+    11. Subdomain takeover
+        - Checkout edoverflow's github on where he explain how subdomains can be owned. Basically some subdomains of a target are pointed to cloud services for ex heroku or aws, however, when companies found there services are no longer required they remove them. But there CNAME is still tagged to these services, so we can host a bucket on heroku or aws and point to those CNAME's to takeover the subdomain.
+        - The above explanation is very vague, I haven't explored too deep in these topic yet, so will update later.
+        - Another tools are nuclei and one more not able to remember.
+    12. Automation++
+
+
+
+
+
+
+
+##################################################################################
+
+
+
+
+
 ## How to Use Amass Efficiently by @jeff_foley
 1. Amass is a tool for mapping the attack surface.
 2. Since amass is a recursive tool, it will take time to get the results, if you want to get the output in certain amount of time use Timeout flag.
